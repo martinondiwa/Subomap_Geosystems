@@ -78,7 +78,7 @@ box-shadow: #b4c3c9;
 }
 
 #hero {
-    background: linear-gradient(rgba(0, 0, 0.507), rgba(0, 0, 0.438)) url(../images/IMG_20230302_133037_641_transcpr.jpg);
+    background: linear-gradient(rgb(71, 71, 82), rgb(193, 174, 174)) url(../images/IMG_20230302_133037_641_transcpr.jpg);
     background-position: center;
     background-size: cover;
 }
