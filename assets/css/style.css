@@ -46,6 +46,9 @@ img {
 /* NAVBAR */
 .navbar {
 box-shadow: #b4c3c9;
+position: sticky;
+top: 0;
+overflow: hidden;
 }
 
 .navbar-nav .nav-link {
