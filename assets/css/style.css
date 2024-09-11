@@ -93,3 +93,15 @@ overflow: hidden;
     opacity: 0.7;  /* If needed, adjust opacity for the image */
 
 }
+
+/*SECTION TITLE */
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title .line {
+    width: 60 px;
+    height: 4px;
+    background-color: var(--c-brand)
+}
