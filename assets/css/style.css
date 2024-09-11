@@ -76,3 +76,10 @@ box-shadow: #b4c3c9;
     border-color: var(--c-brand-light);
     color:aliceblue
 }
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0.507), rgba(0, 0, 0.438)) url(../images/IMG_20230302_133037_641_transcpr.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
