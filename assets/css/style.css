@@ -44,6 +44,9 @@ img {
 }
 
 /* NAVBAR */
+.navbar {
+box-shadow: #b4c3c9;
+}
 
 .navbar-nav .nav-link {
     font-weight: 700;
