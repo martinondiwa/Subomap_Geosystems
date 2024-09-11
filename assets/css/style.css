@@ -47,8 +47,8 @@ img {
 
 .navbar-nav .nav-link {
     font-weight: 500;
-    color: var(--c-dark);
+    color: #12f912;
 }
 .navbar-nav .nav-link.active {
-    color: var(--c-brand);
+    color: #edf4ed;
 }
