@@ -8,6 +8,17 @@
     --c-body: #88c9e3;
     --font-base: "ClashDisplay", sans-serif;
     --box-shadow: #12f912; 
-    --transition: all 0.5s ease
+    --transition: all 0.5s ease;
 
+}
+
+body {
+font-family: var(--font-base);
+line-height: 1.7;
+color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 550;
 }
