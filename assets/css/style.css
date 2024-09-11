@@ -42,3 +42,13 @@ img {
     padding-top: 140px;
     padding-bottom: 140px;
 }
+
+/* NAVBAR */
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
