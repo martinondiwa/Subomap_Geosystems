@@ -1,0 +1,7 @@
+@import url(../css/clash-display.css);
+
+:root {
+    --c-light-blue:	#362f94;
+    --c-brand: #7b2440;
+    --c-brand-light: #b4b7c0;
+}
