@@ -4,4 +4,10 @@
     --c-light-blue:	#362f94;
     --c-brand: #7b2440;
     --c-brand-light: #b4b7c0;
+    --c-brand-rgb: hsl(216, 56%, 71%);
+    --c-body: #88c9e3;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: #12f912; 
+    --transition: all 0.5s ease
+
 }
