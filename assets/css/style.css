@@ -106,3 +106,9 @@ overflow: hidden;
     background-color: var(--c-brand);
     margin: 16px auto 24px auto;
 }
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right:auto;
+}
