@@ -108,7 +108,9 @@ overflow: hidden;
 }
 
 .section-title p {
-    max-width: 500px;
+    max-width: 100%;
     margin-left: auto;
     margin-right:auto;
+    padding-top: 10px;
+    text-align:justify;
 }
