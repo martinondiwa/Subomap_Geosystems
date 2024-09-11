@@ -78,10 +78,14 @@ box-shadow: #b4c3c9;
 }
 
 #hero {
-    background: linear-gradient(rgb(237, 237, 239), rgb(245, 241, 241));
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.7), rgba(var(--c-brand-rgb), 0.7));
     background-position: center;
     background-size: cover;
-    opacity: 0.7;
     background-image: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
-}
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, makes the background stay fixed when scrolling */
+    height: 100vh; /* Ensure it covers the viewport height */
+    width: 100vw;  /* Ensure it covers the viewport width */
+    opacity: 0.7;  /* If needed, adjust opacity for the image */
 
+}
