@@ -101,7 +101,7 @@ overflow: hidden;
 }
 
 .section-title .line {
-    width: 60 px;
+    width: 30 px;
     height: 4px;
     background-color: var(--c-brand);
     margin: 16px auto 24px auto;
@@ -113,4 +113,5 @@ overflow: hidden;
     margin-right:auto;
     padding-top: 10px;
     text-align:justify;
+    margin-bottom: 30px;
 }
