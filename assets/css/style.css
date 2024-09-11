@@ -103,5 +103,6 @@ overflow: hidden;
 .section-title .line {
     width: 60 px;
     height: 4px;
-    background-color: var(--c-brand)
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
 }
