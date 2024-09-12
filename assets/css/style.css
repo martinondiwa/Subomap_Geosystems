@@ -146,5 +146,9 @@ overflow: hidden;
     content: "";
     width: 40px;
     height: 40px;
-    background: rgba(var(--c-brand-rgb), 0.2)
+    background: rgba(var(--c-brand-rgb), 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
