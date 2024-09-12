@@ -115,3 +115,13 @@ overflow: hidden;
     text-align:justify;
     margin-bottom: 30px;
 }
+
+/*ICONBOX*/
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient()
+}
