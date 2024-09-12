@@ -126,4 +126,5 @@ overflow: hidden;
     background: rgba(var(--c-brand-rgb), 0.1);
     color: var(--c-brand);
     font-size: 50px;
+    flex: none;
 }
