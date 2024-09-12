@@ -159,3 +159,12 @@ overflow: hidden;
     background: var(--c-brand-rgb);
     z-index: -1;
 }
+
+.service:hover h5
+.service p {
+    color: wheat
+}
+
+.service:hover .iconbox {
+    background-color: rgba(255, 255, 255, 0.1)
+}
