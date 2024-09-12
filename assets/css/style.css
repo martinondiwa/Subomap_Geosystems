@@ -169,7 +169,7 @@ overflow: hidden;
   }
   
   .service:hover h5, .service:hover p {
-    color: wheat; /* Adjusted hover text color */
+    color: rgb(235, 56, 15); /* Adjusted hover text color */
   }
   
   .service:hover .iconbox {
