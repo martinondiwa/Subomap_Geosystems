@@ -146,4 +146,5 @@ overflow: hidden;
     content: "";
     width: 40px;
     height: 40px;
+    background: rgba(var(--c-brand-rgb), 0.2)
 }
