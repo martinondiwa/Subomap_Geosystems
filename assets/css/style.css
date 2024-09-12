@@ -123,5 +123,7 @@ overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(var(--c-brand-rgb), 0.2)
+    background: rgba(var(--c-brand-rgb), 0.2);
+    color: var(--c-brand);
+    font-size: 50px;
 }
