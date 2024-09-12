@@ -135,37 +135,50 @@ overflow: hidden;
     flex: none;
 }
 
-/*SERVICES*/
+/* SERVICES */
 .service {
-  position: relative;  
-  overflow: hidden;
-  z-index: 2;
-}
-
-.service::after {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service:hover {
+    transform: translateY(-10px); /* Creates a subtle 3D effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+  }
+  
+  .service::after {
     content: "";
     width: 40px;
     height: 40px;
-    background: rgba(var(--c-brand-rgb), 0.2);
+    background: rgba(0, 123, 255, 0.2); /* Example color (adjust as needed) */
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.service:hover::after {
+    transition: all 0.4s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .service:hover::after {
     width: 100%;
     height: 100%;
-    background: var(--c-brand-rgb);
+    background: rgba(0, 123, 255, 0.1); /* Adjust hover color as desired */
     z-index: -1;
-}
-
-.service:hover h5
-.service:hover p {
-    color: wheat
-}
-
-.service:hover .iconbox {
+  }
+  
+  .service:hover h5, .service:hover p {
+    color: wheat; /* Adjusted hover text color */
+  }
+  
+  .service:hover .iconbox {
     background-color: rgba(255, 255, 255, 0.2);
-    color: whitesmoke ;
-}
+    color: whitesmoke;
+  }
+  
+  /* Additional styling for the section */
+  .iconbox {
+    font-size: 2rem; /* Adjust icon size as needed */
+    margin-bottom: 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
