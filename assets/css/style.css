@@ -161,7 +161,7 @@ overflow: hidden;
 }
 
 .service:hover h5
-.service p {
+.service:hover p {
     color: wheat
 }
 
