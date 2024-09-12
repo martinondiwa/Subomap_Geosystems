@@ -152,3 +152,9 @@ overflow: hidden;
     right: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand-rgb)
+}
