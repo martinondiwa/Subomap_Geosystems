@@ -44,6 +44,10 @@ img {
     padding-bottom: 140px;
 }
 
+.theme-shadow {
+    box-shadow: var(--c-light-blue)
+}
+
 /* NAVBAR */
 .navbar {
 box-shadow: #b4c3c9;
