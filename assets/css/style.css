@@ -101,8 +101,10 @@ overflow: hidden;
 }
 
 .section-title .line {
-    width: 30 px;
-    height: 4px;
+    
+    height: 7px;
+    width: 110px;
+    border-radius: 15px;
     background-color: var(--c-brand);
     margin: 16px auto 24px auto;
 }
