@@ -275,3 +275,8 @@ h6:hover {
     transform: translate3d(-50%, -50%);
     opacity: 0;
 }
+
+.portfolio-item:hover .iconbox {
+        opacity: 1;
+        top: 50%;
+}
