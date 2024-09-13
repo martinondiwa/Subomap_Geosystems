@@ -335,23 +335,75 @@ h6:hover {
 }
 
 
-/*Review*/
 
-.review small {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--c-brand);
+/* Review Section */
+.review {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgb(238, 243, 241);
 }
+
 .review-head {
     position: relative;
+    padding: 1.5rem;
+    background-color: rgb(238, 243, 241);
 }
 
 .review-head ::after {
     content: "";
-    width: 28px;
-    height: 28px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(238, 243, 241);
     position: absolute;
-    bottom: -14px;
-    background-color: red;
-    transform: rotate(45deg);
+    bottom: -20px;
+    left: 20px;
+}
+
+.review-message {
+    color: rgb(18, 217, 244); /* Initial text color */
+    padding: 1rem;
+    position: relative;
+    border-radius: 8px;
+    animation: color-change 10s infinite;
+}
+
+/* Animation for Text Color Change */
+@keyframes color-change {
+    0% {
+        color: rgb(18, 217, 244); /* Blue */
+    }
+    50% {
+        color: #4CAF50; /* Green */
+    }
+    100% {
+        color: #FF9800; /* Orange */
+    }
+}
+
+/* Styling for Review Stars */
+.text-warning .ri-star-s-fill {
+    color: orangered;
+}
+
+/* Review Person Style */
+.review-person img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the section title alignment and styling */
+.section-title h1, .section-title h4 {
+    text-align: center;
+}
+
+.section-title .line {
+    margin: 0.5rem auto;
+    height: 3px;
+    width: 50px;
+    background: rgb(35, 12, 211);
 }
