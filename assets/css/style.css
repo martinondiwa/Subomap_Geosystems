@@ -1,35 +1,25 @@
 @import url(../css/clash-display.css);
 
 :root {
-    --c-light-blue: #362f94;
+    --c-light-blue:	#362f94;
     --c-brand: #7b2440;
     --c-brand-light: #b4b7c0;
     --c-brand-rgb: hsl(216, 56%, 71%);
     --c-body: #88c9e3;
     --font-base: "ClashDisplay", sans-serif;
-    --box-shadow: #12f912;
+    --box-shadow: #12f912; 
     --transition: all 0.5s ease;
 
 }
 
 body {
-    font-family: var(--font-base);
-    line-height: 1.7;
-    color: var(--c-body);
+font-family: var(--font-base);
+line-height: 1.7;
+color: var(--c-body);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 600;
     color: rgb(22, 12, 37);
 }
@@ -41,7 +31,7 @@ a {
 }
 
 a:hover {
-    color: var(--c-brand-light);
+    color:var(--c-brand-light);
 }
 
 img {
@@ -60,17 +50,16 @@ img {
 
 /* NAVBAR */
 .navbar {
-    box-shadow: #b4c3c9;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
+box-shadow: #b4c3c9;
+position: sticky;
+top: 0;
+overflow: hidden;
 }
 
 .navbar-nav .nav-link {
     font-weight: 700;
     color: #12f912;
 }
-
 .navbar-nav .nav-link.active {
     color: #edf4ed;
 }
@@ -80,20 +69,20 @@ img {
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
-    border-radius: 0;
+    border-radius:0;
     padding: 10px 24px;
 }
 
 .btn-brand {
-    background-color: aqua;
-    color: azure;
+    background-color:aqua;
+    color:azure;
     border-radius: 8px;
 }
 
 .btn-brand:hover {
     background-color: var(--c-brand-light);
     border-color: var(--c-brand-light);
-    color: aliceblue
+    color:aliceblue
 }
 
 #hero {
@@ -102,14 +91,10 @@ img {
     background-size: cover;
     background-image: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* Optional, makes the background stay fixed when scrolling */
-    height: 100vh;
-    /* Ensure it covers the viewport height */
-    width: 100vw;
-    /* Ensure it covers the viewport width */
-    opacity: 0.7;
-    /* If needed, adjust opacity for the image */
+    background-attachment: fixed; /* Optional, makes the background stay fixed when scrolling */
+    height: 100vh; /* Ensure it covers the viewport height */
+    width: 100vw;  /* Ensure it covers the viewport width */
+    opacity: 0.7;  /* If needed, adjust opacity for the image */
 
 }
 
@@ -120,7 +105,7 @@ img {
 }
 
 .section-title .line {
-
+    
     height: 7px;
     width: 110px;
     border-radius: 15px;
@@ -131,9 +116,9 @@ img {
 .section-title p {
     max-width: 500;
     margin-left: auto;
-    margin-right: auto;
+    margin-right:auto;
     padding-top: 10px;
-    text-align: justify;
+    text-align:justify;
     margin-bottom: 30px;
 }
 
@@ -157,16 +142,14 @@ img {
     z-index: 2;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service:hover {
-    transform: translateY(-10px);
-    /* Creates a subtle 3D effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Enhanced shadow for 3D effect */
-}
-
-.service::after {
+  }
+  
+  .service:hover {
+    transform: translateY(-10px); /* Creates a subtle 3D effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+  }
+  
+  .service::after {
     content: "";
     width: 40px;
     height: 40px;
@@ -174,88 +157,68 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: all 0.4s ease-in-out;
-    /* Smooth transition for hover effect */
-    border-radius: 0 100% 0 0;
-}
-
-.service:hover::after {
+    transition: all 0.4s ease-in-out; /* Smooth transition for hover effect */
+    border-radius: 0 100% 0 0; 
+  }
+  
+  .service:hover::after {
     width: 100%;
     height: 100%;
-    background: rgba(0, 4, 8, 0.1);
-    /* Adjust hover color as desired */
+    background: rgba(0, 4, 8, 0.1); /* Adjust hover color as desired */
     z-index: -1;
-}
-
-.service:hover h5,
-.service:hover p {
-    color: rgb(235, 56, 15);
-    /* Adjusted hover text color */
-}
-
-.service:hover .iconbox {
+  }
+  
+  .service:hover h5, .service:hover p {
+    color: rgb(235, 56, 15); /* Adjusted hover text color */
+  }
+  
+  .service:hover .iconbox {
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(245, 245, 245);
-}
-
-/* Additional styling for the section */
-.iconbox {
-    font-size: 2rem;
-    /* Adjust icon size as needed */
+  }
+  
+  /* Additional styling for the section */
+  .iconbox {
+    font-size: 2rem; /* Adjust icon size as needed */
     margin-bottom: 15px;
     transition: color 0.3s ease, background-color 0.3s ease;
-}
+  }
 
-.imageserv {
-    width: 60px;
-    /* Adjust as needed */
-    height: 60px;
-    /* Adjust as needed */
-    margin: 0 auto 15px;
-    /* Centers the image and adds space below */
+  .imageserv {
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    margin: 0 auto 15px; /* Centers the image and adds space below */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.imageserv img {
+  }
+  
+  .imageserv img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
-    /* Ensures the image retains its aspect ratio */
+    object-fit: contain; /* Ensures the image retains its aspect ratio */
     border-radius: 20%;
-}
+  }
 
-
-/*COUNTER*/
-#counter {
+  
+  /*COUNTER*/
+  #counter {
     background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8));
     background-position: center;
     background-size: cover;
     background-image: url(../images/IMG_20230303_110638_750_transcpr.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 50vh;
-    /* Set to half the screen height */
+    height: 50vh; /* Set to half the screen height */
     display: flex;
-    align-items: center;
-    /* Center content vertically */
-    justify-content: center;
-    /* Center content horizontally */
-    animation: backgroundAnimation 8s infinite alternate;
-    /* Background animation */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    animation: backgroundAnimation 8s infinite alternate; /* Background animation */
 }
 
 @keyframes backgroundAnimation {
-    0% {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    100% {
-        background-color: rgba(0, 0, 255, 0.5);
-    }
-
-    /* Color transition from black to blue */
+    0% { background-color: rgba(0, 0, 0, 0.5); }
+    100% { background-color: rgba(255, 0, 0, 0.5); } /* Color transition from black to blue */
 }
 
 .counter {
@@ -265,8 +228,7 @@ img {
 }
 
 .counter:hover {
-    color: #ff9900;
-    /* Changes color when hovered */
+    color: #ff9900; /* Changes color when hovered */
 }
 
 h6 {
@@ -274,43 +236,35 @@ h6 {
 }
 
 h6:hover {
-    color: #ff9900;
-    /* Text color on hover */
+    color: #ff9900; /* Text color on hover */
 }
 
 /*Inline javascript style*/
 
 .counter {
     font-size: 3rem;
-    transition: color 0.5s ease-in-out;
-    /* Smooth transition for color change */
+    transition: color 0.5s ease-in-out; /* Smooth transition for color change */
 }
 
 /* Portfolio */
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Shadow for floating effect */
-    margin-bottom: 16px;
-    /* Margin to separate stacked images */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+    margin-bottom: 16px; /* Margin to separate stacked images */
 }
 
 .portfolio-item .iconbox {
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    border-radius: 50%;
-    /* Rounded shape */
-    width: 40px;
-    /* Width and height of the icon box */
+    border-radius: 50%; /* Rounded shape */
+    width: 40px; /* Width and height of the icon box */
     height: 40px;
     display: flex;
     align-items: center;
@@ -324,8 +278,7 @@ h6:hover {
 }
 
 .iconbox i {
-    font-size: 20px;
-    /* Icon size */
+    font-size: 20px; /* Icon size */
 }
 
 /* Image Zoom */
@@ -339,57 +292,44 @@ h6:hover {
 
 .image-zoom-wrapper img {
     transition: transform 0.3s ease;
-    width: 100%;
-    /* Ensure images fill the container */
+    width: 100%; /* Ensure images fill the container */
     height: auto;
-    object-fit: cover;
-    /* Crop the image to fit */
+    object-fit: cover; /* Crop the image to fit */
 }
 
 /* Adding spacing between stacked images */
 .col-md-4.d-flex.flex-column .portfolio-item {
-    margin-bottom: 16px;
-    /* Add space between stacked images */
+    margin-bottom: 16px; /* Add space between stacked images */
 }
 
 .image-zoom:hover .image-zoom-wrapper img {
-    transform: scale(1.05);
-    /* Slight zoom effect */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Styling for different sizes */
 .small-image img {
-    max-width: 100%;
-    /* Ensure image does not exceed container width */
-    max-height: 200px;
-    /* Control the height of smaller images */
-    object-fit: cover;
-    /* Crop to fit */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 200px; /* Control the height of smaller images */
+    object-fit: cover; /* Crop to fit */
 }
 
 .large-image img {
-    max-width: 100%;
-    /* Ensure image does not exceed container width */
-    max-height: 500px;
-    /* Control the height of large images */
-    object-fit: cover;
-    /* Crop to fit */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 500px; /* Control the height of large images */
+    object-fit: cover; /* Crop to fit */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 767px) {
     .image-zoom-wrapper img {
-        max-height: 150px;
-        /* Adjust max-height for smaller screens */
+        max-height: 150px; /* Adjust max-height for smaller screens */
     }
 
     .large-image img {
-        max-height: 300px;
-        /* Adjust max-height for smaller screens */
+        max-height: 300px; /* Adjust max-height for smaller screens */
     }
 
     .small-image img {
-        max-height: 150px;
-        /* Adjust max-height for smaller screens */
+        max-height: 150px; /* Adjust max-height for smaller screens */
     }
 }
