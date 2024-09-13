@@ -48,19 +48,19 @@ img {
     box-shadow: var(--c-light-blue)
 }
 
-/*IMAGE ZOOM*/
+/* Image Zoom */
 .image-zoom {
-    position: relative;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .image-zoom-wrapper {
-    overflow: hidden;
     position: relative;
 }
 
 .image-zoom-wrapper img {
-    transition: var(--transition);
+    transition: transform 0.3s ease;
+    width: 100%; /* Ensure images fill the container */
+    height: auto;
 }
 
 .image-zoom:hover .image-zoom-wrapper img {
@@ -265,6 +265,7 @@ h6:hover {
     transition: color 0.5s ease-in-out; /* Smooth transition for color change */
 }
 
+/*Portfolio*/
 .portfolio-item .iconbox {
 
     background-color: var(--c-body);
