@@ -204,7 +204,10 @@ overflow: hidden;
 
   #counter {
 
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.7), rgba(var(--c-brand-rgb), 0.7));
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8));
     background-position: center;
     background-size: cover;
+    background-image: url(../images/IMG_20230303_113024_318_transcpr.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
   }
