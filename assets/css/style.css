@@ -346,6 +346,7 @@ h6:hover {
     width: 28px;
     height: 28px;
     position: absolute;
-    bottom: 0;
+    bottom: -14px;
     background-color: red;
+    transform: rotate(45deg);
 }
