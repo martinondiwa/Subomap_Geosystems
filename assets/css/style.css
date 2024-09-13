@@ -265,19 +265,36 @@ h6:hover {
     transition: color 0.5s ease-in-out; /* Smooth transition for color change */
 }
 
-/*Portfolio*/
-.portfolio-item .iconbox {
+/* Portfolio */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+}
 
-    background-color: var(--c-body);
+.portfolio-item .iconbox {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     color: white;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
+    border-radius: 50%; /* Rounded shape */
+    width: 40px; /* Width and height of the icon box */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-item:hover .iconbox {
-        opacity: 1;
-        top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.iconbox i {
+    font-size: 20px; /* Icon size */
 }
