@@ -298,3 +298,20 @@ h6:hover {
 .iconbox i {
     font-size: 20px; /* Icon size */
 }
+
+
+/* Specific Styling for Large Image in the Middle Row */
+.large-image {
+    width: 100%;
+}
+
+.large-image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .portfolio-item {
+        margin-bottom: 30px;
+    }
+}
