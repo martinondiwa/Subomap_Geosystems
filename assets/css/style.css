@@ -337,6 +337,11 @@ h6:hover {
 
 /*Review*/
 
+.review small {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-brand);
+}
 .review-head {
     position: relative;
 }
