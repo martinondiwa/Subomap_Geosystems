@@ -60,9 +60,12 @@ img {
 }
 
 .image-zoom-wrapper img {
-    
+    transition: var(--transition);
 }
 
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
 
 /* NAVBAR */
 .navbar {
