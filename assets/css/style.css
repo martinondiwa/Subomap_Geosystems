@@ -199,3 +199,12 @@ overflow: hidden;
     object-fit: contain; /* Ensures the image retains its aspect ratio */
     border-radius: 20%;
   }
+
+  /*COUNTER*/
+
+  #counter {
+
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.7), rgba(var(--c-brand-rgb), 0.7));
+    background-position: center;
+    background-size: cover;
+  }
