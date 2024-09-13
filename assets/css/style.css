@@ -200,6 +200,7 @@ overflow: hidden;
     border-radius: 20%;
   }
 
+  
   /*COUNTER*/
   #counter {
     background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8));
