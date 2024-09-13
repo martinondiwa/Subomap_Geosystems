@@ -267,10 +267,11 @@ h6:hover {
 
 .portfolio-item .iconbox {
 
-    background-color: var(--c-brand);
+    background-color: var(--c-body);
     color: white;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate3d(-50%, -50%);
+    opacity: 0;
 }
