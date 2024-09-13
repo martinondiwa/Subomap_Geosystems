@@ -201,3 +201,39 @@ overflow: hidden;
   }
 
   /*COUNTER*/
+  #counter {
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8));
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/IMG_20230303_110638_750_transcpr.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh; /* Set to half the screen height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    animation: backgroundAnimation 8s infinite alternate; /* Background animation */
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: rgba(0, 0, 0, 0.5); }
+    100% { background-color: rgba(0, 0, 255, 0.5); } /* Color transition from black to blue */
+}
+
+.counter {
+    color: white;
+    font-size: 3rem;
+    transition: color 1s ease-in-out;
+}
+
+.counter:hover {
+    color: #ff9900; /* Changes color when hovered */
+}
+
+h6 {
+    transition: color 1s ease-in-out;
+}
+
+h6:hover {
+    color: #ff9900; /* Text color on hover */
+}
