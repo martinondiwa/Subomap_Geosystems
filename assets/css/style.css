@@ -201,13 +201,3 @@ overflow: hidden;
   }
 
   /*COUNTER*/
-
-  #counter {
-
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8));
-    background-position: center;
-    background-size: cover;
-    background-image: url(../images/IMG_20230303_110638_750_transcpr.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-  }
