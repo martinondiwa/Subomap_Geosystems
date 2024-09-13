@@ -48,6 +48,22 @@ img {
     box-shadow: var(--c-light-blue)
 }
 
+/*IMAGE ZOOM*/
+.image-zoom {
+    position: relative;
+    overflow:hidden;
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img {
+    
+}
+
+
 /* NAVBAR */
 .navbar {
 box-shadow: #b4c3c9;
