@@ -237,3 +237,10 @@ h6 {
 h6:hover {
     color: #ff9900; /* Text color on hover */
 }
+
+/*Inline javascript style*/
+
+.counter {
+    font-size: 3rem;
+    transition: color 0.5s ease-in-out; /* Smooth transition for color change */
+}
