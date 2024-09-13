@@ -280,13 +280,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const counters = document.querySelectorAll('.counter');
+
             counters.forEach(counter => {
-                counter.innerText = '0';
+                const target = +counter.getAttribute('data-count'); // Get target number
+                const increment = target / 100; // Speed of counting
 
                 const updateCounter = () => {
-                    const target = +counter.getAttribute('data-count'); // Get target number
-                    const count = +counter.innerText;
-                    const increment = target / 100; // Speed of counting
+                    let count = +counter.innerText; // Get current count
 
                     if (count < target) {
                         counter.innerText = `${Math.ceil(count + increment)}`;
@@ -304,10 +304,18 @@
                     } else {
                         counter.innerText = target;
                         counter.style.color = 'blue'; // Ensure it ends on blue
+                        setTimeout(() => {
+                            resetCounter(counter); // Call reset function after reaching the peak
+                        }, 1000); // Wait 1 second before restarting
                     }
                 };
 
-                updateCounter();
+                const resetCounter = (counter) => {
+                    counter.innerText = '0'; // Reset the counter text to 0
+                    updateCounter(); // Start counting again
+                };
+
+                updateCounter(); // Start counting initially
             });
         });
     </script>
