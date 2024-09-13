@@ -333,3 +333,19 @@ h6:hover {
         max-height: 150px; /* Adjust max-height for smaller screens */
     }
 }
+
+
+/*Review*/
+
+.review-head {
+    position: relative;
+}
+
+.review-head ::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+}
