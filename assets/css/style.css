@@ -501,8 +501,8 @@ nav a:hover {
 }
 
 section {
-    background: linear-gradient(135deg, #dadae3, #6F86D6);
-    color: white; /* Ensure text is readable on the gradient */
+    background: linear-gradient(135deg, #dadae3, #bbc4e6);
+    color: rgb(212, 208, 208); /* Ensure text is readable on the gradient */
 } 
 /*CONTACT*/
 #contact {
