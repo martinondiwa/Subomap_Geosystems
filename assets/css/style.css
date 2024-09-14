@@ -451,3 +451,7 @@ h6:hover {
     opacity: 1;
     bottom: 24px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
