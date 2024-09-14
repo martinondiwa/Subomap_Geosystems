@@ -469,3 +469,9 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
     background-color: rgba(59, 59, 232, 1);
 }
+
+nav a.active {
+    color: rgb(59, 59, 232); /* Your theme color */
+    font-weight: bold;
+    border-bottom: 2px solid rgb(59, 59, 232);
+}
