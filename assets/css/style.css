@@ -413,4 +413,6 @@ h6:hover {
     bottom: -24px;
     left: 50%;
     width: calc(100% -50px);
+    transform: translate(-50%);
+    padding: 24px;
  }
