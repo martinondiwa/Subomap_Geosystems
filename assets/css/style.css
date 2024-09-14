@@ -527,3 +527,12 @@ section {
     background-attachment: fixed;
     
 }
+
+#contact .form-control {
+    border: radius 0;
+}
+
+#contact .form-control:focus {
+    box-shadow:none;
+    border-color:var(--c-brand)
+}
