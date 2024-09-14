@@ -456,3 +456,6 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    width: 12px;
+}
