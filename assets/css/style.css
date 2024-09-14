@@ -475,3 +475,9 @@ nav a.active {
     font-weight: bold;
     border-bottom: 2px solid rgb(59, 59, 232);
 }
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
