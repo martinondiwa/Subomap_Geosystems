@@ -435,7 +435,7 @@ h6:hover {
 }
 
 .team-member-content {
-    background-color: var(--c-brand);
+    background-color:#8b84ed;
     position: absolute;
     bottom: -24px;
     left: 50%;
