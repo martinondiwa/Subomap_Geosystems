@@ -519,5 +519,7 @@ section {
     background-position: center;
     background-size: cover;
     background-image: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
-    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    
 }
