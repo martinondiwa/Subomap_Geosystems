@@ -404,3 +404,13 @@ h6:hover {
  #small {
     color: var(--c-brand)
  }
+
+ /*TEAM*/
+
+ .team-memeber-content{
+    background-color:#88c9e3;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: calc(100% -50px);
+ }
