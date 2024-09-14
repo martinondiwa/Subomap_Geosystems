@@ -444,6 +444,7 @@ h6:hover {
     padding: 24px;
     transition: bottom 0.3s ease, opacity 0.3s ease;
     opacity: 0;
+    border-radius: 15%;
 }
 
 .team-member:hover .team-member-content {
