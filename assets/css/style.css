@@ -510,3 +510,9 @@ section {
     position: relative;
     z-index: 2;
 }
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+}
