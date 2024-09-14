@@ -102,6 +102,7 @@ overflow: hidden;
 
 .section-title {
     margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 .section-title .line {
@@ -399,11 +400,4 @@ h6:hover {
 /* Adjust the section title alignment and styling */
 .section-title h1, .section-title h4 {
     text-align: center;
-}
-
-.section-title .line {
-    margin: 0.5rem auto;
-    height: 3px;
-    width: 50px;
-    background: rgb(35, 12, 211);
 }
