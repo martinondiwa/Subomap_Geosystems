@@ -452,6 +452,7 @@ h6:hover {
     bottom: 24px;
 }
 
+/*smoothening scroll transition between windows*/
 html {
     scroll-behavior: smooth;
 }
