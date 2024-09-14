@@ -459,3 +459,8 @@ html {
 html::-webkit-scrollbar {
     width: 12px;
 }
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 59, 232, 0.8); /* Custom color for the scrollbar */
+    border-radius: 10px;
+}
