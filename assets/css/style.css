@@ -493,3 +493,15 @@ section.in-view {
     background-size: cover;
     background-position: center;
 }
+
+.btn:hover {
+    background-color: rgba(59, 59, 232, 0.9);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect on nav links */
+nav a:hover {
+    color: rgba(59, 59, 232, 1);
+    text-decoration: underline;
+}
