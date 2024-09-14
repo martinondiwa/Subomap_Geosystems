@@ -401,3 +401,6 @@ h6:hover {
 .section-title h1, .section-title h4 {
     text-align: center;
 }
+ #small {
+    color: var(--c-brand)
+ }
