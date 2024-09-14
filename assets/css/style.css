@@ -505,3 +505,8 @@ nav a:hover {
     color: rgba(59, 59, 232, 1);
     text-decoration: underline;
 }
+
+section {
+    background: linear-gradient(135deg, #3B3BE8, #6F86D6);
+    color: white; /* Ensure text is readable on the gradient */
+}
