@@ -418,3 +418,8 @@ h6:hover {
     transition: var(--transition);
     opacity: 0;
  }
+
+ .team-memeber:hover .team-memeber-content {
+    opacity: 1;
+    bottom: 24px;
+ }
