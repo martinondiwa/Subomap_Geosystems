@@ -504,9 +504,8 @@ section {
     background: linear-gradient(135deg, #3B3BE8, #6F86D6);
     color: white; /* Ensure text is readable on the gradient */
 } 
-
 /*CONTACT*/
-#Contact {
+#contact {
     position: relative;
     z-index: 2;
 }
@@ -514,25 +513,68 @@ section {
 #contact::after {
     content: "";
     width: 100%;
-    height: 70%;
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.7), rgba(var(--c-brand-rgb), 0.7));
+    height: 100%;
+    background: rgba(173, 216, 230, 0.5); /* Light blue transparent overlay */
+    background-image: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
     background-position: center;
     background-size: cover;
-    background-image: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
+/* FORM CONTROL STYLES */
 #contact .form-control {
-    border: radius 0;
+    border-radius: 0.5rem; /* Smooth border radius */
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for the form fields */
+    transition: all 0.3s ease; /* Smooth transition for focus */
 }
 
 #contact .form-control:focus {
-    box-shadow:none;
-    border-color:var(--c-brand)
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Soft blue glow on focus */
+    border-color: var(--c-brand);
+    outline: none;
+}
+
+/* BUTTON STYLING */
+#contact .btn-brand {
+    background-color: var(--c-brand);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .btn-brand:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Section Title Styling */
+#contact .section-title h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for the title */
+}
+
+#contact .section-title h4 {
+    color: rgba(255, 255, 255, 0.8); /* Light white for subtitle */
+    font-weight: 300;
+}
+
+/* Line under the title */
+#contact .line {
+    width: 60px;
+    height: 4px;
+    background-color: white;
+    margin: 0 auto 20px;
+}
+
+/* Smooth transitions and aesthetics */
+.section-padding {
+    padding: 60px 0;
 }
