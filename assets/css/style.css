@@ -486,3 +486,10 @@ section.in-view {
     opacity: 1;
     transform: translateY(0);
 }
+
+.parallax {
+    background-image: url('your-image-path.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
