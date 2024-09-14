@@ -474,20 +474,14 @@ nav a.active {
     color: rgb(59, 59, 232); /* Your theme color */
     font-weight: bold;
     border-bottom: 2px solid rgb(59, 59, 232);
-}
-
-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+} 
 
 section.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 
-.parallax {
+html .parallax {
     background-image: url('your-image-path.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -509,4 +503,4 @@ nav a:hover {
 section {
     background: linear-gradient(135deg, #3B3BE8, #6F86D6);
     color: white; /* Ensure text is readable on the gradient */
-}
+} 
