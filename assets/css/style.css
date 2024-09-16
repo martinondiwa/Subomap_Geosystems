@@ -201,6 +201,39 @@ overflow: hidden;
     border-radius: 20%;
   }
 
+  /*moto,vissio*/
+  .box {
+    margin-bottom: 20px;
+  }
+
+  .clickable {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: block;
+    font-weight: bold;
+  }
+
+  .clickable:hover {
+    background-color: #e0e0e0;
+  }
+
+  .content {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  /* When the checkbox is checked, show the content */
+  .toggle:checked + .clickable + .content {
+    display: block;
+  }
   
   /*COUNTER*/
   #counter {
