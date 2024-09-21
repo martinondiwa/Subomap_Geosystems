@@ -116,24 +116,28 @@
                                 /* Rounded corners for the accordion */
                                 overflow: hidden;
                                 /* Prevent overflow of content */
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                                /* Subtle shadow for depth */
+                                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                                /* Deeper shadow for depth */
                             }
 
                             .accordion-item {
-                                border: 1px solid #e0e0e0;
-                                /* Light border between items */
-                                border-radius: 10px;
-                                /* Rounded corners for each item */
+                                border: none;
+                                /* Remove default border */
                                 margin-bottom: 10px;
                                 /* Spacing between items */
+                                border-radius: 10px;
+                                /* Rounded corners for each item */
+                                overflow: hidden;
+                                /* Ensure content stays within rounded corners */
                             }
 
                             .accordion-header {
-                                background-color: #007bff;
-                                /* Blue color for the header */
+                                background-color: #003366;
+                                /* Dark blue color for the header */
                                 color: white;
                                 /* White text for header */
+                                border-radius: 10px;
+                                /* Rounded corners for header */
                             }
 
                             .accordion-button {
@@ -143,13 +147,19 @@
                                 /* Transparent background for button */
                                 border: none;
                                 /* Remove border */
-                                transition: background-color 0.3s;
-                                /* Smooth transition for hover effect */
+                                padding: 15px 20px;
+                                /* More padding for a button-like feel */
+                                font-weight: bold;
+                                /* Bold text for better emphasis */
+                                transition: background-color 0.3s, transform 0.3s;
+                                /* Smooth transition */
                             }
 
                             .accordion-button:hover {
-                                background-color: rgba(255, 165, 0, 0.2);
+                                background-color: rgba(255, 165, 0, 0.3);
                                 /* Light orange hover effect */
+                                transform: scale(1.02);
+                                /* Slight scale on hover */
                             }
 
                             .accordion-body {
@@ -159,6 +169,8 @@
                                 /* Dark text color for better readability */
                                 padding: 20px;
                                 /* Padding inside the body */
+                                border-top: 2px solid #ff6f20;
+                                /* Orange border on top of body */
                             }
 
                             strong {
