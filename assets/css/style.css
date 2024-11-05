@@ -326,7 +326,7 @@ h6:hover {
 
 .image-zoom-wrapper img {
     transition: transform 0.3s ease;
-    width: 90%; /* Ensure images fill the container */
+    width: 70%; /* Ensure images fill the container */
     height: auto;
     object-fit: cover; /* Crop the image to fit */
 }
