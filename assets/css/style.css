@@ -54,15 +54,18 @@ box-shadow: #b4c3c9;
 position: sticky;
 top: 0;
 overflow: hidden;
+
 }
 
 .navbar-nav .nav-link {
     font-weight: 700;
     color: #12f912;
+    text-decoration: none !important; 
 }
 .navbar-nav .nav-link.active {
     color: #edf4ed;
 }
+
 
 /*BTN Style*/
 .btn {
@@ -506,7 +509,7 @@ html::-webkit-scrollbar-thumb:hover {
 nav a.active {
     color: rgb(59, 59, 232); /* Your theme color */
     font-weight: bold;
-    border-bottom: 2px solid rgb(59, 59, 232);
+    /*border-bottom: 2px solid rgb(59, 59, 232);*/
 } 
 
 section.in-view {
