@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: darkgray;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: orange;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    background-color: transparent;
+}
+
+.section-title h1 {
+    font-size: 3em;
+    color: rgb(35, 12, 211);
+}
+
+.section-title h4 {
+    font-size: 1.3em;
+    color: rgb(35, 12, 211);
+    margin-bottom: 30px;
+}
+
+.service-card {
+    margin-bottom: 30px;
+}
+
+.service {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.service:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.service .imageserv i {
+    color: #2196f3; /* Blue */
+}
+
+.service h5 {
+    color: #333;
+}
+
+.service p {
+    color: #555;
+}
+
+.service-card:hover .service h5 {
+    color: orange; /* Orange */
+}
+
+/* Footer */
+footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
