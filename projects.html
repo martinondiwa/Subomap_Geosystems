@@ -71,6 +71,58 @@
       color: #333;
     }
   </style>
+  <style>
+    /* General Section Styling */
+  #portfolio {
+    background-color: #f8f9fa;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-title h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #007BFF;
+  }
+
+  .intro {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #6c757d;
+  }
+
+  .line {
+    width: 60px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 10px auto;
+  }
+
+  .category-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #343a40;
+    text-transform: uppercase;
+  }
+
+  /* Hover Effects for Project Cards */
+  .project-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  </style>
 <body>
 <!-- Top Navbar -->
 <div class="top-nav">
@@ -268,122 +320,138 @@
     </div>
   </nav>
 
-     
-    <!-- Portfolio Section -->
-  <section id="portfolio" class="section-padding">
+  <!-- Portfolio Section -->
+<section id="portfolio" class="section-padding bg-light">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <div class="section-title">
-            <h1 class="display-4 fw-semibold">Our Projects</h1>
-            <div class="line"></div>
-            <p class="intro">
+          <div class="section-title mb-5">
+            <h1 class="display-4 fw-semibold text-primary">Our Projects</h1>
+            <div class="line mb-4"></div>
+            <p class="intro lead">
               Discover our remarkable journey in delivering innovative and precise surveying solutions, from cadastral surveys to cutting-edge geospatial web applications.
             </p>
           </div>
         </div>
       </div>
-
+  
       <!-- Cadastral Surveys -->
-      <div class="project-category">
-        <h2 class="category-title" style="text-align: center;" >Cadastral Surveys</h2>
+      <div class="project-category mb-5">
+        <h2 class="category-title text-center text-dark mb-4">Cadastral Surveys</h2>
         <div class="row">
-          <div class="col-lg-6 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/Land_Subdivision.JPG"/></div>
-              <h3>Boundary Confirmation</h3>
-              <p>Precision boundary confirmation for properties in high-value locations in Nairobi, ensuring legal compliance and ownership confidence.</p>
+          <div class="col-lg-6 col-sm-12">
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Land_Subdivision.JPG" alt="Boundary Confirmation">
+              <div class="project-info p-3">
+                <h3>Boundary Confirmation</h3>
+                <p>Precision boundary confirmation for properties in high-value locations in Nairobi, ensuring legal compliance and ownership confidence.</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-6 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/land_sub_2.JPG"/></div>
-              <h3>Land Subdivision</h3>
-              <p>Expert subdivision of residential and commercial plots in Karen and other locations, supporting property development and efficient utilization.</p>
+          <div class="col-lg-6 col-sm-12">
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/land_sub_2.JPG" alt="Land Subdivision">
+              <div class="project-info p-3">
+                <h3>Land Subdivision</h3>
+                <p>Expert subdivision of residential and commercial plots in Karen and other locations, supporting property development and efficient utilization.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+  
       <!-- Sectional Property Surveys -->
-      <div class="project-category">
-        <h2 class="category-title">Sectional Property Surveys</h2>
+      <div class="project-category mb-5">
+        <h2 class="category-title text-center text-dark mb-4">Sectional Property Surveys</h2>
         <div class="row">
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/flat.JPG"/></div>
-              <h3>Apartments</h3>
-              <p>Comprehensive surveys for multi-unit developments such as Kings Eden Gardens in Lavington to facilitate smooth property transactions.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/flat.JPG" alt="Apartments">
+              <div class="project-info p-3">
+                <h3>Apartments</h3>
+                <p>Comprehensive surveys for multi-unit developments such as Kings Eden Gardens in Lavington to facilitate smooth property transactions.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/Town_Houses.JPG"/></div>
-              <h3>Townhouses</h3>
-              <p>Specialized surveys for townhouse developments in Kileleshwa, offering precision and compliance with sectional property guidelines.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Town_Houses.JPG" alt="Townhouses">
+              <div class="project-info p-3">
+                <h3>Townhouses</h3>
+                <p>Specialized surveys for townhouse developments in Kileleshwa, offering precision and compliance with sectional property guidelines.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+  
       <!-- Engineering Surveys -->
-      <div class="project-category">
-        <h2 class="category-title">Engineering Surveys</h2>
+      <div class="project-category mb-5">
+        <h2 class="category-title text-center text-dark mb-4">Engineering Surveys</h2>
         <div class="row">
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 350px; width: 500px;" src="./Assets/images/IMG_20231021_142501_364.jpg"/></div>
-              <h3>Road Surveys</h3>
-              <p style="color: orangered;">Detailed as-built and leveling surveys for key infrastructure projects such as the Kitui-Kibwezi and C12 roads.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20231021_142501_364.jpg" alt="Road Surveys">
+              <div class="project-info p-3">
+                <h3>Road Surveys</h3>
+                <p style="color: orangered;">Detailed as-built and leveling surveys for key infrastructure projects such as the Kitui-Kibwezi and C12 roads.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 350px; width: 500px;" src="./Assets/images/IMG_20230303_110638_750_transcpr.jpg"/></div>
-              <h3>Foundation Surveys</h3>
-              <p style="color: orangered;"> 3D foundation surveys for academic institutions like the Technical University of Kenya, ensuring construction accuracy.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20230303_110638_750_transcpr.jpg" alt="Foundation Surveys">
+              <div class="project-info p-3">
+                <h3>Foundation Surveys</h3>
+                <p style="color: orangered;">3D foundation surveys for academic institutions like the Technical University of Kenya, ensuring construction accuracy.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+  
       <!-- Topographic Surveys -->
-      <div class="project-category">
-        <h2 class="category-title">Topographic Surveys</h2>
+      <div class="project-category mb-5">
+        <h2 class="category-title text-center text-dark mb-4">Topographic Surveys</h2>
         <div class="row">
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 350px; width: 500px; " src="./Assets/images/IMG_20240217_150700.jpg"/></div>
-              <h3>Campus Topography</h3>
-              <p style="color:orangered">Comprehensive surveys for South B Campus and Kibwezi Campus, aiding in site planning and infrastructure development.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20240217_150700.jpg" alt="Campus Topography">
+              <div class="project-info p-3">
+                <h3>Campus Topography</h3>
+                <p style="color: orangered;">Comprehensive surveys for South B Campus and Kibwezi Campus, aiding in site planning and infrastructure development.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+  
       <!-- Geospatial Applications -->
-      <div class="project-category">
-        <h2 class="category-title">Geospatial Web Applications</h2>
+      <div class="project-category mb-5">
+        <h2 class="category-title text-center text-dark mb-4">Geospatial Web Applications</h2>
         <div class="row">
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/Tanzania.JPG"/></div>
-              <h3>Urbanization Analysis</h3>
-              <p>Developed geospatial web tools to analyze urban growth in Tanzania using light data for dynamic urban planning.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Tanzania.JPG" alt="Urbanization Analysis">
+              <div class="project-info p-3">
+                <h3>Urbanization Analysis</h3>
+                <p>Developed geospatial web tools to analyze urban growth in Tanzania using light data for dynamic urban planning.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <div class="project-card">
-              <div class="project-image"><img style="height: 200px; width: 550px;" src="./Assets/images/Carbon.JPG"/></div>
-              <h3>Carbon Mapping</h3>
-              <p>Innovative Python-powered applications for carbon sequestration, aiding in environmental sustainability efforts.</p>
+            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
+              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Carbon.JPG" alt="Carbon Mapping">
+              <div class="project-info p-3">
+                <h3>Carbon Mapping</h3>
+                <p>Innovative Python-powered applications for carbon sequestration, aiding in environmental sustainability efforts.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
    <!--Footer-->
    <footer class="text-light py-4" style="background-color: rgb(44, 61, 71)">
