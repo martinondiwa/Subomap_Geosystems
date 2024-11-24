@@ -103,7 +103,7 @@ img {
 .btn-brand:hover {
     background-color: var(--c-brand-light);
     border-color: var(--c-brand-light);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
