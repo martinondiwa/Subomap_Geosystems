@@ -19,7 +19,16 @@ body {
     line-height: 1.7;
     color: var(--c-body);
 }
-
+/* Transition Effects */
+#transition-body {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+  }
+  
+  #transition-body.fade-out {
+    opacity: 0;
+  }
+  
 h1, h2, h3,h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 600;
