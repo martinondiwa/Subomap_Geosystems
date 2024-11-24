@@ -109,7 +109,7 @@ img {
 
 /* HERO */
 #hero {
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-1.jpg);
+    background: url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.08\ PM\ \(1\).jpeg);
     background-position: center;
     background-size: cover;
 }
