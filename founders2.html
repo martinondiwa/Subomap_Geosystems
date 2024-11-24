@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subomap Africa Geosystems</title>
+
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    /* Top Navbar Styles */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(44, 61, 71);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .top-nav .left-section,
+    .top-nav .right-section {
+      display: flex;
+      align-items: center;
+    }
+    .top-nav .icon-text {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+    .top-nav .icon-text i {
+      margin-right: 5px;
+    }
+    .top-nav .search-icon {
+      cursor: pointer;
+    }
+    /* Search box */
+    .search-box {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .search-box input[type="text"] {
+      padding: 5px;
+      width: 200px;
+      color: #333;
+    }
+  </style>
+
+  <body>
+    <!-- Top Navbar -->
+    <div class="top-nav">
+      <div class="left-section">
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+            />
+          </svg>
+          <span style="padding-left: 10px">Phone: 0745 344 881</span>
+        </div>
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+            />
+          </svg>
+          <span style="padding-left: 10px"
+            >Email: geo@subomapgeosystems.com</span
+          >
+        </div>
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-clock"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+            />
+            <path
+              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+            />
+          </svg>
+          <span style="padding-left: 10px">Mon-Fri: 8am - 5p.m</span>
+        </div>
+      </div>
+      <div class="right-section">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+          />
+        </svg>
+        <div class="search-box" id="searchBox">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </div>
+      
+    <!--Navbar-->
+    
+    <!--Navbar-->
+    <nav
+      class="navbar navbar-expand-lg"
+      style="
+        height: auto;
+        background-color: rgb(250, 250, 250) !important;
+        position: sticky top;
+      "
+    >
+      <div class="container-fluid">
+        <div style="width: 100px; height: 80px; display: flex">
+          <div style="display: flex; align-items: center">
+            <div>
+              <a
+                class="navbar-brand"
+                href="#"
+                style="display: inline-block; width: 300px; height: auto"
+              >
+                <img
+                  src="assets/images/a-01.png"
+                  alt="Logo"
+                  class="logoimg"
+                  style="
+                    border-radius: 40%;
+                    width: 300px;
+                    height: auto;
+                    object-fit: contain;
+                  "
+                />
+                <i class="fas fa-globe-africa" style="font-size: 20px"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="nauisvbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" style="color: rgb(140, 55, 13) !important">
+              <a
+                class="nav-link active"
+                aria-current="index.html"
+                href="index.html"
+                style="color: blue !important; border-bottom: none"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="index.html"
+                href="index.html"
+                style="color: blue !important; border-bottom: none"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="services.html"
+                href="services.html"
+                style="color: blue !important; border-bottom: none"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="projects.html"
+                href="projects.html"
+                style="color: blue !important; border-bottom: none"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="instrumentation.html"
+                href="instrumentation.html"
+                style="color: blue !important; border-bottom: none"
+                > Technology & Tools </a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="founders.html"
+                href="founders.html"
+                style="color: blue !important; border-bottom: none"
+                >Team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="contactus.html"
+                href="contactus.html"
+                style="
+                  color: whitesmoke !important;
+                  background-color: orangered;
+                  padding: 5px 10px;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  display: inline-block;
+                  border-bottom: 2px solid rgb(59, 59, 232);
+                "
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Dash-->
+    
+    <!-- TEAM PAGE HEADER -->
+  <header class="team-header">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Meet Our Team</h1>
+      <p class="lead">
+        A group of passionate professionals committed to delivering precise and innovative land survey solutions.
+      </p>
+    </div>
+  </header>
+
+  <!-- TEAM MEMBERS SECTION -->
+  <section id="team-members" class="section-padding">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Team Member 1 -->
+          <div class="col">
+            <div class="card">
+              <img
+                src="./assets/images/Kondiwamat.JPG"
+                class="card-img-top"
+                alt="Martin Sure"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Martin Sure</h5>
+                <p class="card-text">
+                  <strong>Geospatial/Software Engineer</strong><br />
+                  Expert in software development and geospatial analytics.
+                </p>
+                <div>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-twitter-x-line"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-facebook-circle-fill"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-linkedin-box-fill"></i
+                  ></a>
+                  <a href="#" class="social-icon" style="color: blue"
+                    ><i class="ri-instagram-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col">
+            <div class="card">
+              <img
+                src="./assets/images/Okeyo_Meya.PNG"
+                class="card-img-top"
+                alt="Kennedy Meya"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kennedy Meya</h5>
+                <p class="card-text">
+                  <strong>Geospatial Engineer/Graphic Designer</strong><br />
+                  Specializing in creative design and spatial data visualization.
+                </p>
+                <div>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-twitter-x-line"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-facebook-circle-fill"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-linkedin-box-fill"></i
+                  ></a>
+                  <a href="#" class="social-icon" style="color: blue"
+                    ><i class="ri-instagram-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for other team members -->
+          <div class="col">
+            <div class="card">
+              <img
+                src="./assets/images/Nyakongo.jpg"
+                class="card-img-top"
+                alt="Boaz Nyakongo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Boaz Nyakongo</h5>
+                <p class="card-text">
+                  <strong>Geospatial/Software Engineer/Environmental Mapping Expert</strong><br />
+                  Skilled in environmental assessments and 3D mapping.
+                </p>
+                <div>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-twitter-x-line"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-facebook-circle-fill"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-linkedin-box-fill"></i
+                  ></a>
+                  <a href="#" class="social-icon" style="color: blue"
+                    ><i class="ri-instagram-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img
+                src="./assets/images/Stanley.JPG"
+                class="card-img-top"
+                alt="Stanley Okoth"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Stanley Okoth</h5>
+                <p class="card-text">
+                  <strong>Geospatial Engineer</strong><br />
+                  Expert in topographical surveys and engineering solutions.
+                </p>
+                <div>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-twitter-x-line"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-facebook-circle-fill"></i
+                  ></a>
+                  <a href="#" class="me-2 social-icon" style="color: blue"
+                    ><i class="ri-linkedin-box-fill"></i
+                  ></a>
+                  <a href="#" class="social-icon" style="color: blue"
+                    ><i class="ri-instagram-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--Footer-->
+    <footer class="text-light py-4" style="background-color: rgb(44, 61, 71)">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row justify-content-between">
+            <!-- Logo & Description Column -->
+            <div class="col-lg-3 col-sm-6 mb-4">
+              <a href="#">
+                <img
+                  style="border-radius: 40% !important"
+                  src="./assets/images/logo.jpeg"
+                  alt="Subomap Logo"
+                  class="mb-3"
+                />
+              </a>
+              <div
+                class="line mb-2"
+                style="background-color: rgb(0, 153, 255)"
+              ></div>
+              <p style="color: white">
+                Delivering precision and innovation in land surveying across
+                Kenya – Subomap Geosystems Africa.
+              </p>
+              <div class="social-icons mt-3">
+                <a href="#" class="me-2 social-icon" style="color: white"
+                  ><i class="ri-twitter-x-line"></i
+                ></a>
+                <a href="#" class="me-2 social-icon" style="color: white"
+                  ><i class="ri-facebook-circle-fill"></i
+                ></a>
+                <a href="#" class="me-2 social-icon" style="color: white"
+                  ><i class="ri-linkedin-box-fill"></i
+                ></a>
+                <a href="#" class="social-icon" style="color: white"
+                  ><i class="ri-instagram-line"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Services Column -->
+            <div class="col-lg-2 col-sm-6 mb-4">
+              <h5 class="mb-3 service-heading" style="color: rgb(219, 91, 32)">
+                Our Services
+              </h5>
+              <div class="line mb-2" style="background-color: white"></div>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Cadastral & Boundary Surveys</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Topographic Mapping & Analysis</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >3D Modeling & Data Collection</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Engineering & Construction Surveys</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Subdivision & Property Surveys</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Carbon Mapping & Environmental Impact Analysis</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="service-link" style="color: white"
+                    >Web & Graphic Design</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- About Column -->
+            <div class="col-lg-2 col-sm-6 mb-4">
+              <h5 class="mb-3 about-heading" style="color: rgb(219, 91, 32)">
+                About Us
+              </h5>
+              <div class="line mb-2" style="background-color: white"></div>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="about-link" style="color: white"
+                    >Projects Completed</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="about-link" style="color: white"
+                    >Pricing & Packages</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="about-link" style="color: white"
+                    >Company Overview</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="about-link" style="color: white"
+                    >Career Opportunities</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-sm-6 mb-4">
+              <h5 class="mb-3 contact-heading" style="color: rgb(219, 91, 32)">
+                Contact Us
+              </h5>
+              <div class="line mb-2" style="background-color: white"></div>
+              <ul class="list-unstyled">
+                <li style="color: white">
+                  <strong>Location:</strong> Nairobi CBD, Railways Center
+                </li>
+                <li style="color: white">
+                  <strong>Website:</strong>
+                  <a href="#" style="color: white" class="contact-link"
+                    >www.subomapgeosystems.com</a
+                  >
+                </li>
+                <li style="color: white">
+                  <p><strong>Mobile:</strong> 0745 344 81</p>
+                  <p>0797073761</p>
+                  <p>0794815207</p>
+                </li>
+                <li style="color: white"><strong>Email:</strong></li>
+                <ul>
+                  <li>
+                    <a
+                      href="mailto:admin@subomap.org"
+                      class="contact-link"
+                      style="color: white"
+                      >admin@subomapgeosystems.com</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:sales@subomap.org"
+                      class="contact-link"
+                      style="color: white"
+                      >sales@subomapgeosystems.com
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Add CSS for hover effects -->
+    <style>
+      .service-link:hover,
+      .about-link:hover,
+      .contact-link:hover {
+        color: blue !important;
+        text-decoration: underline;
+      }
+
+      .social-icon:hover {
+        color: white !important;
+        background-color: blue;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      .service-heading:hover,
+      .about-heading:hover,
+      .contact-heading:hover {
+        color: white !important;
+      }
+    </style>
+
+    <footer class="bg-dark">
+      <div class="footer-top"></div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row g-4 justify-content-between">
+            <div class="col-auto">
+              <p>@Copyright subomap_Geosystems. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+   <script>
+    window.transitionToPage = function(href) {
+      document.querySelector('body').style.opacity = 0
+      setTimeout(function() { 
+          window.location.href = href
+      }, 500)
+  }
+  
+  document.addEventListener('DOMContentLoaded', function(event) {
+      document.querySelector('body').style.opacity = 1
+  })
+   </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Boostrap cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--the below bootrstap script alows for scrolldown between different windows-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  </body>
+</html>
