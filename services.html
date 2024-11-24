@@ -675,7 +675,18 @@
           });
         });
       }); -->
-   
+   <script>
+    window.transitionToPage = function(href) {
+      document.querySelector('body').style.opacity = 0
+      setTimeout(function() { 
+          window.location.href = href
+      }, 500)
+  }
+  
+  document.addEventListener('DOMContentLoaded', function(event) {
+      document.querySelector('body').style.opacity = 1
+  })
+   </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/fancybox.min.js"></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--the below bootrstap script alows for scrolldown between different windows-->
