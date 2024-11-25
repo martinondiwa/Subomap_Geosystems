@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technology and Tools</title>
+  <title>Contact us</title>
 
-  <link rel="stylesheet" href="Technology_&_Tools.css" />
+  
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="contactus.html">
   
   <link
   rel="stylesheet"
@@ -70,6 +70,39 @@
       width: 200px;
       color: #333;
     }
+  </style>
+  
+  <style>
+   
+/* CONTACT */
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background:  url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
   </style>
 <body>
 <!-- Top Navbar -->
