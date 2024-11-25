@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Projects</title>
+  <title>Subomap Africa Geosystems</title>
 
   <link rel="stylesheet" href="Technology_&_Tools.css" />
   <link rel="stylesheet" href="style.css">
@@ -72,56 +72,167 @@
     }
   </style>
   <style>
-    /* General Section Styling */
-  #portfolio {
-    background-color: #f8f9fa;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* FONTS */
+@import url(../css/clash-display.css);
+
+/* VARIABLES */
+:root {
+    --c-dark: #212529;
+    --c-brand: #2761e8;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #727272;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    opacity: 0;
+   transition: opacity 0.9s;
+}
+/* Transition Effects */
+#transition-body {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    
+  }
+  
+  #transition-body.fade-out {
+    opacity: 0;
   }
 
-  .section-title h1 {
-    font-size: 3rem;
+h1, h2, h3,h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 600;
-    color: #007BFF;
-  }
+    color: var(--c-dark);
+}
 
-  .intro {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #6c757d;
-  }
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
 
-  .line {
-    width: 60px;
-    height: 3px;
-    background-color: #007BFF;
-    margin: 10px auto;
-  }
+a:hover {
+    color: var(--c-brand-light);
+}
 
-  .category-title {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #343a40;
-    text-transform: uppercase;
-  }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-  /* Hover Effects for Project Cards */
-  .project-card {
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
     position: relative;
-    background-color: #fff;
-    border-radius: 8px;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    position: relative;
+}
 
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
 
-  .hover-zoom:hover {
-    transform: scale(1.05);
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+
+/* BTN */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: rgb(255, 255, 255);
+}
+
+
+/* HERO */
+#hero {
+    
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+}
+
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ICONBOX */
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rgb), 0.1);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
   </style>
 <body>
 <!-- Top Navbar -->
@@ -320,138 +431,303 @@
     </div>
   </nav>
 
-  <!-- Portfolio Section -->
-<section id="portfolio" class="section-padding bg-light">
+     
+     
+    <!--Dash-->
+    <section
+    id="hero"
+    class="main-vh-100 d-flex align-items-center text-center"
+  style="background: url(../images/Kajiado.JPG);">
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
-          <div class="section-title mb-5">
-            <h1 class="display-4 fw-semibold text-primary">Our Projects</h1>
-            <div class="line mb-4"></div>
-            <p class="intro lead">
-              Discover our remarkable journey in delivering innovative and precise surveying solutions, from cadastral surveys to cutting-edge geospatial web applications.
-            </p>
+        <div class="col-12">
+          <h1
+            class="text-uppercase fw-semibold display-1 me-2"
+            style="color: rgb(24, 24, 149)"
+          >
+            Welcome To Subomap Africa Geosystems
+          </h1>
+          <h5 class="mt-3 mb-4" style="color: orangered">
+            WE ARE TEAM OF HIGHLY SKILLED LAND SURVEYORS BASED IN NAIROBI
+            KENYA
+          </h5>
+          <a href="aboutus.html" class="btn btn-brand">Get Started</a>
+          <a href="projects.html" class="btn btn-light ms-2">Our Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--About-->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title text-center">
+            <h1 class="display-4 fw-semibold">ABOUT US</h1>
+            <div class="line my-3"></div>
+            <style>
+              .accordion {
+                background-color: #ffffff;
+
+                border-radius: 10px;
+                /* Rounded corners for the accordion */
+                overflow: hidden;
+                /* Prevent overflow of content */
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                /* Shadow for depth */
+              }
+
+              .accordion-item {
+                border: none;
+                /* Remove default border */
+                margin-bottom: 10px;
+                /* Spacing between items */
+                border-radius: 10px;
+                /* Rounded corners for each item */
+                overflow: hidden;
+                /* Ensure content stays within rounded corners */
+              }
+
+              .accordion-header {
+                background-color: #003366;
+                /* Dark blue color for the header */
+                color: white;
+                /* White text for header */
+                border-radius: 10px;
+                /* Rounded corners for header */
+              }
+
+              .accordion-button {
+                color: white;
+                /* White text for button */
+                background: transparent;
+                /* Transparent background for button */
+                border: none;
+                /* Remove border */
+                padding: 15px 20px;
+                /* Padding for a button-like feel */
+                font-weight: bold;
+                /* Bold text for emphasis */
+                transition: background-color 0.3s, transform 0.3s;
+                /* Smooth transition */
+              }
+
+              .accordion-button:hover {
+                background-color: #ff6f20;
+                /* Orange hover effect */
+                transform: scale(1.02);
+                /* Slight scale on hover */
+              }
+
+              .accordion-body {
+                background-color: #ffffff;
+                /* White background for body */
+                color: #333;
+                /* Dark text color for readability */
+                padding: 20px;
+                /* Padding inside the body */
+                border-top: 2px solid #ff6f20;
+                /* Orange border on top of body */
+              }
+
+              strong {
+                display: block;
+                /* Make strong elements block for spacing */
+                margin-bottom: 10px;
+                /* Space below strong elements */
+                color: #ff6f20;
+                /* Orange color for strong text */
+              }
+            </style>
+
+            <div
+              class="accordion"
+              id="accordionExample"
+              style="text-align: start"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Mission Statement
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong
+                      >To provide innovative and precise land surveying, GIS,
+                      ICT, engineering and land management services that
+                      enhance sustainable development across Africa and
+                      beyond.</strong
+                    >
+                    <br />
+                    Our mission is to deliver precise and innovative land
+                    surveying services that contribute to the sustainable
+                    development and responsible management of land and
+                    property assets. By combining cutting-edge technologies
+                    with a commitment to environmental stewardship, we aim to
+                    support societal growth and positively impact the
+                    communities we serve.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Vision
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong
+                      >To become the leading geospatial surveying and
+                      engineering company, recognized for accuracy,
+                      reliability, and dedication to transforming Africa's
+                      landscape. The vision is a future where services drive
+                      economic progress, environmental sustainability, and
+                      technological advancement across the continent.</strong
+                    >
+                    <br />Our mission is to deliver precise and innovative
+                    land surveying services that contribute to the sustainable
+                    development and responsible management of land and
+                    property assets. By combining cutting-edge technologies
+                    with a commitment to environmental stewardship, we aim to
+                    support societal growth and positively impact the
+                    communities we serve.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Core Values
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong
+                      >Integrity <br />
+                      Innovation <br />
+                      Precision <br />
+                      Client-centric service <br />
+                      Sustainability <br />
+                      Professionalism <br />
+                    </strong>
+                    Our core values drive us to uphold the highest standards
+                    in all aspects of our work. We are committed to integrity,
+                    ensuring honesty and transparency in every project.
+                    Embracing innovation, we utilize cutting-edge technologies
+                    to stay ahead in our field. Precision is paramount, with
+                    meticulous attention to detail in every survey and
+                    measurement. Our client-centric approach ensures we tailor
+                    our services to meet individual needs, fostering
+                    satisfaction and long-term relationships. We prioritize
+                    sustainability through responsible resource use, and our
+                    professionalism guarantees reliability and exceptional
+                    quality in all our endeavors.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  
-      <!-- Cadastral Surveys -->
-      <div class="project-category mb-5">
-        <h2 class="category-title text-center text-dark mb-4">Cadastral Surveys</h2>
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Land_Subdivision.JPG" alt="Boundary Confirmation">
-              <div class="project-info p-3">
-                <h3>Boundary Confirmation</h3>
-                <p>Precision boundary confirmation for properties in high-value locations in Nairobi, ensuring legal compliance and ownership confidence.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/land_sub_2.JPG" alt="Land Subdivision">
-              <div class="project-info p-3">
-                <h3>Land Subdivision</h3>
-                <p>Expert subdivision of residential and commercial plots in Karen and other locations, supporting property development and efficient utilization.</p>
-              </div>
-            </div>
+
+      <div class="row align-items-center mt-4">
+        <!-- Image Section -->
+        <div class="col-lg-6 mb-4">
+          <div class="section-img">
+            <img
+              src="./assets/images/IMG_20230303_113016_668_transcpr.jpg"
+              class="img-fluid"
+              alt="Subomap Geosystems"
+            />
           </div>
         </div>
-      </div>
-  
-      <!-- Sectional Property Surveys -->
-      <div class="project-category mb-5">
-        <h2 class="category-title text-center text-dark mb-4">Sectional Property Surveys</h2>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/flat.JPG" alt="Apartments">
-              <div class="project-info p-3">
-                <h3>Apartments</h3>
-                <p>Comprehensive surveys for multi-unit developments such as Kings Eden Gardens in Lavington to facilitate smooth property transactions.</p>
-              </div>
+
+        <!-- Text Section -->
+        <div class="col-lg-5 text-align:center">
+          <h3>Subomap Your Leading Partner in Land survey Services</h3>
+
+          <p class="mt-3 mb-4">
+            Subomap Geosystems Africa provides precision-focused, cutting-edge
+            surveying solutions for all your land and engineering needs.
+          </p>
+          <div class="d-flex pt-4 mb-3">
+            <div class="iconbox me-4">
+              <i class="ri-focus-2-line"></i>
+            </div>
+            <div>
+              <h5>We are the leading Cadastral Surveyors in Nairobi</h5>
+              <p>
+                Accurate boundary mapping trusted by clients across Nairobi,
+                delivering over 20 successful projects.
+              </p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Town_Houses.JPG" alt="Townhouses">
-              <div class="project-info p-3">
-                <h3>Townhouses</h3>
-                <p>Specialized surveys for townhouse developments in Kileleshwa, offering precision and compliance with sectional property guidelines.</p>
-              </div>
+          <div class="d-flex">
+            <div class="iconbox me-4">
+              <i class="ri-base-station-line"></i>
+            </div>
+            <div>
+              <h5>We are the Leading in modern land survey Technologies</h5>
+              <p>
+                Harnessing the power of the latest survey tech, we deliver
+                unparalleled accuracy in diverse projects.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-  
-      <!-- Engineering Surveys -->
-      <div class="project-category mb-5">
-        <h2 class="category-title text-center text-dark mb-4">Engineering Surveys</h2>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20231021_142501_364.jpg" alt="Road Surveys">
-              <div class="project-info p-3">
-                <h3>Road Surveys</h3>
-                <p style="color: orangered;">Detailed as-built and leveling surveys for key infrastructure projects such as the Kitui-Kibwezi and C12 roads.</p>
-              </div>
+          <div class="d-flex">
+            <div class="iconbox me-4">
+              <i class="ri-radar-fill"></i>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20230303_110638_750_transcpr.jpg" alt="Foundation Surveys">
-              <div class="project-info p-3">
-                <h3>Foundation Surveys</h3>
-                <p style="color: orangered;">3D foundation surveys for academic institutions like the Technical University of Kenya, ensuring construction accuracy.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Topographic Surveys -->
-      <div class="project-category mb-5">
-        <h2 class="category-title text-center text-dark mb-4">Topographic Surveys</h2>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 350px; width: 100%; object-fit: cover;" src="./Assets/images/IMG_20240217_150700.jpg" alt="Campus Topography">
-              <div class="project-info p-3">
-                <h3>Campus Topography</h3>
-                <p style="color: orangered;">Comprehensive surveys for South B Campus and Kibwezi Campus, aiding in site planning and infrastructure development.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Geospatial Applications -->
-      <div class="project-category mb-5">
-        <h2 class="category-title text-center text-dark mb-4">Geospatial Web Applications</h2>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Tanzania.JPG" alt="Urbanization Analysis">
-              <div class="project-info p-3">
-                <h3>Urbanization Analysis</h3>
-                <p>Developed geospatial web tools to analyze urban growth in Tanzania using light data for dynamic urban planning.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="project-card shadow-lg rounded overflow-hidden mb-4 hover-zoom">
-              <img class="img-fluid" style="height: 200px; width: 100%; object-fit: cover;" src="./Assets/images/Carbon.JPG" alt="Carbon Mapping">
-              <div class="project-info p-3">
-                <h3>Carbon Mapping</h3>
-                <p>Innovative Python-powered applications for carbon sequestration, aiding in environmental sustainability efforts.</p>
-              </div>
+            <div>
+              <h5>We are the best in Gis & Remote Sensing</h5>
+              <p>
+                Blending cutting-edge geospatial insights with precision, we
+                bring transformative solutions to diverse landscapes.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
    <!--Footer-->
    <footer class="text-light py-4" style="background-color: rgb(44, 61, 71)">
