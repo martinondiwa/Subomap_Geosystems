@@ -6,7 +6,7 @@
     --c-brand: #2761e8;
     --c-brand-light: #6970dd;
     --c-brand-rgb: 78, 87, 212;
-    --c-body: #727272;
+    --c-body: transparent;
     --font-base: "ClashDisplay", sans-serif;
     --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
     --transition: all 0.5s ease;
