@@ -480,18 +480,138 @@
     }
   </style>
 
-  <footer class="bg-dark">
-    <div class="footer-top"></div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row g-4 justify-content-between">
-          <div class="col-auto">
-            <p>@Copyright subomap_Geosystems. All Rights Reserved</p>
-          </div>
+
+  
+    <!-- Add CSS for hover effects -->
+    <style>
+      .service-link:hover,
+      .about-link:hover,
+      .contact-link:hover {
+        color: blue !important;
+        text-decoration: underline;
+      }
+
+      .social-icon:hover {
+        color: white !important;
+        background-color: blue;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      .service-heading:hover,
+      .about-heading:hover,
+      .contact-heading:hover {
+        color: white !important;
+      }
+    </style>
+
+    <footer style="
+  background-color: rgb(44, 61, 71); 
+  color: #fff; 
+  padding: 20px 0; 
+  text-align: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  position: relative; 
+  border-top: 4px solid #007bff;
+">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <!-- Logo -->
+        <div
+          style="margin-bottom: 15px; display: flex; justify-content: center; align-items: center;">
+          <img
+            src="./Assets/images/logo.jpeg"
+            alt="Company Logo"
+            style="
+          border-radius: 40%; 
+          width: 70px; 
+          height: auto; 
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          transition: transform 0.3s ease;
+        "
+            onmouseover="this.style.transform='scale(1.1)';"
+            onmouseout="this.style.transform='scale(1)';" />
         </div>
-      </div>
-    </div>
-  </footer>
+
+        <!-- Footer Links -->
+        <div
+          style="margin-bottom: 15px; display: flex; justify-content: center; gap: 20px;">
+          <a href="aboutus.html" style="
+        color: #fff; 
+        text-decoration: none; 
+        transition: color 0.3s ease;"
+            onmouseover="this.style.color='#007bff';"
+            onmouseout="this.style.color='#fff';">About Us</a>
+          <a href="services.html" style="
+        color: #fff; 
+        text-decoration: none; 
+        transition: color 0.3s ease;"
+            onmouseover="this.style.color='#007bff';"
+            onmouseout="this.style.color='#fff';">Services</a>
+          <a href="contactus.html" style="
+        color: #fff; 
+        text-decoration: none; 
+        transition: color 0.3s ease;"
+            onmouseover="this.style.color='#007bff';"
+            onmouseout="this.style.color='#fff';">Contact</a>
+        </div>
+
+        <!-- Separator Line -->
+        <hr style="
+      border: none; 
+      border-top: 1px solid white; 
+      margin: 20px 0;">
+
+        <!-- Copyright -->
+        <p style="margin: 0; color: rgb(30, 45, 53);">
+          © 2024 Company Name. All rights reserved.
+        </p>
+
+        <!-- Social Media Icons -->
+        <div
+          style="margin-top: 10px; display: flex; justify-content: center; gap: 10px;">
+          
+
+          <a href="#" class="me-2 social-icon" style="color: white;
+            text-decoration: none; 
+    font-size: 18px; 
+    transition: color 0.3s ease;"
+            onmouseover="this.style.color='#007bff';"
+            onmouseout="this.style.color='#FF4500';"><i
+              class="ri-twitter-x-line"></i></a>
+
+          <a href="https://www.facebook.com/profile.php?id=61565386922966&mibextid=ZbWKwL" class="me-2 social-icon" style="color: white;
+              text-decoration: none; 
+      font-size: 18px; 
+      transition: color 0.3s ease;"
+            onmouseover="this.style.color='#007bff';"
+            onmouseout="this.style.color='#FF4500';"> <i
+              class="ri-facebook-circle-fill"></i>
+
+            <a href="https://www.linkedin.com/in/subomap-geosystems/" class="me-2 social-icon" style="color: white;
+              text-decoration: none; 
+      font-size: 18px; 
+      transition: color 0.3s ease;"
+              onmouseover="this.style.color='#007bff';"
+              onmouseout="this.style.color='#FF4500';"><i
+                class="ri-linkedin-box-fill"></i></a>
+
+            <a href="https://www.instagram.com/subomap/?hl=en" class="me-2 social-icon" style="color: white;
+            text-decoration: none; 
+    font-size: 18px; 
+    transition: color 0.3s ease;"
+              onmouseover="this.style.color='#007bff';"
+              onmouseout="this.style.color='#FF4500';"><i
+                class="ri-instagram-line"></i></a>
+
+          </div>
+        </footer>
+        <footer class="bg-dark" >
+         
+          <div style="height: 1px; position:sticky">
+           
+          </div>
+      </footer>
 
   <!--Smooth erasng Javascript
     document.querySelectorAll("nav a").forEach((anchor) => {
