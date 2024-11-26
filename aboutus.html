@@ -166,6 +166,113 @@
       }
     }
   </style>
+  <style>
+    .section-title h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    .section-title .line {
+      width: 50px;
+      height: 3px;
+      background-color: rgb(35, 12, 211);
+      margin: 10px auto;
+    }
+    
+    .about-card {
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+      background-color: #f9f9f9;
+    }
+    
+    .about-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .about-card h3 {
+      font-size: 1.5rem;
+      color: rgb(35, 12, 211);
+    }
+    
+    .about-card p {
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* Feature Box Styles */
+    .feature-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: #f0f9ff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .feature-box:hover {
+      background-color: #c7e2ff;
+    }
+    
+    .iconbox {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(35, 12, 211);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .iconbox i {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    
+    .feature-box div {
+      flex-grow: 1;
+    }
+    
+    .feature-box h5 {
+      font-size: 1.25rem;
+      color: rgb(35, 12, 211);
+      margin-bottom: 10px;
+    }
+    
+    .feature-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .section-title h1 {
+        font-size: 2rem;
+      }
+    
+      .about-card {
+        padding: 15px;
+      }
+    
+      .feature-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .feature-box .iconbox {
+        margin-bottom: 10px;
+      }
+    
+      .section-img img {
+        width: 100%;
+      }
+    }
+  </style>
 <body>
 <!-- Top Navbar -->
 <div class="top-nav">
@@ -365,67 +472,49 @@
   <section id="about-page">
     <div class="container">
       <!-- Section Title -->
-      <div class="section-title">
+      <div class="section-title text-center">
         <h1>ABOUT US</h1>
-        <div class="line"></div>
+        <div class="line mx-auto"></div>
       </div>
-
-
-      <!-- Mission, Vision, Core Values Accordion -->
-      <div class="accordion" id="aboutAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mission" aria-expanded="true">
-              Mission Statement
-            </button>
-          </h2>
-          <div id="mission" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              <strong>To provide innovative and precise land surveying, GIS, ICT, engineering, and land management services that enhance sustainable development across Africa and beyond.</strong>
-              <p>Our mission is to deliver cutting-edge surveying services that contribute to sustainable land and property management, supporting societal growth while committing to environmental stewardship.</p>
-            </div>
+  
+      <!-- Mission, Vision, Core Values Cards -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="about-card">
+            <h3>Mission Statement</h3>
+            <p><strong>To provide innovative and precise land surveying, GIS, ICT, engineering, and land management services that enhance sustainable development across Africa and beyond.</strong></p>
+            <p>Our mission is to deliver cutting-edge surveying services that contribute to sustainable land and property management, supporting societal growth while committing to environmental stewardship.</p>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vision" aria-expanded="false">
-              Vision
-            </button>
-          </h2>
-          <div id="vision" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <strong>To become the leading geospatial surveying and engineering company, driving economic progress, environmental sustainability, and technological innovation across Africa.</strong>
-              <p>We envision a future where our services transform landscapes, empower communities, and foster sustainable development through innovative geospatial solutions.</p>
-            </div>
+  
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="about-card">
+            <h3>Vision</h3>
+            <p><strong>To become the leading geospatial surveying and engineering company, driving economic progress, environmental sustainability, and technological innovation across Africa.</strong></p>
+            <p>We envision a future where our services transform landscapes, empower communities, and foster sustainable development through innovative geospatial solutions.</p>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#values" aria-expanded="false">
-              Core Values
-            </button>
-          </h2>
-          <div id="values" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <p><strong>Integrity, Innovation, Precision, Client-Centric Service, Sustainability, Professionalism.</strong></p>
-              <p>Our values guide us to deliver exceptional quality, ensuring transparency, embracing technology, and prioritizing sustainable practices.</p>
-            </div>
+  
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="about-card">
+            <h3>Core Values</h3>
+            <p><strong>Integrity, Innovation, Precision, Client-Centric Service, Sustainability, Professionalism.</strong></p>
+            <p>Our values guide us to deliver exceptional quality, ensuring transparency, embracing technology, and prioritizing sustainable practices.</p>
           </div>
         </div>
       </div>
-
-      <!-- Feature Section -->
+  
+      <!-- Feature Section with Image and Icon Boxes -->
       <div class="row align-items-center mt-5">
         <div class="col-lg-6">
           <div class="section-img">
-            <img src="./Assets/images/IMG_20230303_113016_668_transcpr.jpg" alt="Subomap Geosystems" class="img-fluid">
+            <img src="./Assets/images/IMG_20230303_113016_668_transcpr.jpg" alt="Subomap Geosystems" class="img-fluid" />
           </div>
         </div>
-        <div class="col-lg-6 text-center-lg">
+        <div class="col-lg-6">
           <h3>Subomap: Your Leading Partner in Land Survey Services</h3>
           <p class="mt-3">Precision-focused, technology-driven surveying solutions for all your land and engineering needs.</p>
+  
           <div class="feature-box">
             <div class="iconbox"><i class="ri-focus-2-line"></i></div>
             <div>
@@ -433,6 +522,7 @@
               <p>Accurate boundary mapping with over 20 successful projects in Nairobi.</p>
             </div>
           </div>
+  
           <div class="feature-box">
             <div class="iconbox"><i class="ri-base-station-line"></i></div>
             <div>
@@ -440,6 +530,7 @@
               <p>Utilizing advanced tools to deliver unparalleled project accuracy.</p>
             </div>
           </div>
+  
           <div class="feature-box">
             <div class="iconbox"><i class="ri-radar-fill"></i></div>
             <div>
