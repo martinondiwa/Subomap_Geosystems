@@ -297,8 +297,9 @@
             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
         </svg>
         <div class="search-box" id="searchBox">
-          <input type="text" placeholder="Search..." />
-        </div>
+          <input type="text" placeholder="Search..." id="searchInput" oninput="searchWebsite()">
+      </div>
+      
       </div>
     </div>
     <!--Navbar-->
@@ -631,6 +632,27 @@
         });
       });
     }); -->
+     <!--Search Script-->
+     <script>
+      function searchWebsite() {
+          // Get the search term
+          var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  
+          // Get all paragraphs, headings, and other content elements
+          var contentElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, a');
+          
+          // Loop through all elements to show or hide based on the search term
+          contentElements.forEach(function(element) {
+              if (element.textContent.toLowerCase().includes(searchTerm)) {
+                  element.style.display = 'block';  // Show matching elements
+              } else {
+                  element.style.display = 'none';   // Hide non-matching elements
+              }
+          });
+      }
+  </script>
+  
+    <!--Smooth Transition-->
           <script>
       window.transitionToPage = function (href) {
         document.querySelector("body").style.opacity = 0;
