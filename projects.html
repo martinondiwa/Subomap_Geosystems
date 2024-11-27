@@ -27,50 +27,64 @@
   href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
 />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<style>
-    /* Top Navbar Styles */
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgb(44, 61, 71);
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 14px;
-    }
-    .top-nav .left-section,
-    .top-nav .right-section {
-      display: flex;
-      align-items: center;
-    }
-    .top-nav .icon-text {
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-    }
-    .top-nav .icon-text i {
-      margin-right: 5px;
-    }
-    .top-nav .search-icon {
-      cursor: pointer;
-    }
-    /* Search box */
-    .search-box {
-      display: none;
-      position: absolute;
-      right: 20px;
-      top: 50px;
-      background-color: #333;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .search-box input[type="text"] {
-      padding: 5px;
-      width: 200px;
-      color: #333;
-    }
-  </style>
+</head><style>
+  /* Top Navbar Styles */
+.top-nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(44, 61, 71);
+color: #fff;
+padding: 5px 5px;
+font-size: 14px;
+}
+
+.left-section {
+display: flex;
+align-items: center;
+}
+
+.icon-text {
+display: flex;
+align-items: center;
+margin-right: 20px;
+}
+
+.search-form {
+display: flex;
+align-items: center;
+}
+
+.search-input {
+padding: 5px;
+border: none;
+border-radius: 15px;
+outline: none;
+width: 180px;
+background-color: #fff;
+color: #000;
+margin-right: 10px;
+}
+
+.search-button {
+padding: 5px 10px !important;
+border: none;
+border-radius: 15px !important;
+background-color: rgba(70, 130, 180, 0.7); /* Faded blue */
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+background-color: rgba(255, 255, 255, 0.7); /* Faded white */
+}
+
+.search-button:active {
+background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+</style>
   <style>
     /* General Section Styling */
   #portfolio {
