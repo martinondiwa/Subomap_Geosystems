@@ -7,7 +7,7 @@
 
 #contact::after {
     content: "";
-    width: 100%;
+    width: 450px;
     height: 70%;
     background:  url(../images/WhatsApp\ Image\ 2024-09-07\ at\ 11.12.05\ PM\ \(1\).jpeg);
     background-position: center;
