@@ -33,6 +33,10 @@
   
     /* Top Navbar Styles */
 .top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -368,7 +372,11 @@
     style="
       height: auto;
       background-color: rgb(250, 250, 250) !important;
-      position: sticky top;
+     position: fixed;
+      top: 50px;
+      width: 100%;
+      z-index: 9999; 
+       box-shadow: var(--box-shadow);
     "
   >
     <div class="container-fluid">
@@ -483,7 +491,12 @@
       </div>
     </div>
   </nav>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
      
   <section id="about-page">
     <div class="container">
@@ -590,7 +603,8 @@
   text-align: center; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
-  position: relative; 
+  position: fixed-bottom; 
+  width:100%;
   border-top: 4px solid #007bff;
 ">
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
