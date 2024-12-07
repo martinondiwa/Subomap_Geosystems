@@ -705,16 +705,20 @@
           </div>
       </footer>
 
-  <!--Smooth erasng Javascript
-    document.querySelectorAll("nav a").forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
+      <script>
+        document.querySelector(".search-button").addEventListener("click", function () {
+          const query = document.querySelector(".search-input").value.trim();
+          if (query) {
+            const encodedQuery = encodeURIComponent(query);
+            // Replace with your site's search handling logic
+            window.location.href = `/search-results?query=${encodedQuery}`;
+          } else {
+            alert("Please enter a search term.");
+          }
         });
-      });
-    }); -->
+        
+       </script>
+    
  <script>
   window.transitionToPage = function(href) {
     document.querySelector('body').style.opacity = 0
